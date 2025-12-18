@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mirror Invoice System</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="print.css" media="print">
+</head>
+<body>
+
+<div class="header">
+  <img src="logo.png" class="logo" alt="Company Logo">
+  <h1>Mirror Invoice System</h1>
+</div>
+
+<div class="container">
+
+  <div class="box">
+    <h3>Seller Information</h3>
+    <input type="text" id="sellerName" placeholder="Seller Name">
+    <input type="text" id="sellerNTN" placeholder="Seller NTN">
+    <input type="text" id="sellerSTRN" placeholder="Seller STRN">
+  </div>
+
+  <div class="box">
+    <h3>Buyer Information</h3>
+    <input type="text" id="buyerName" placeholder="Buyer Name">
+    <input type="text" id="buyerNTN" placeholder="Buyer NTN">
+  </div>
+
+  <div class="box">
+    <h3>Add Item</h3>
+    <input type="text" id="itemName" placeholder="Item Name">
+    <input type="number" id="qty" placeholder="Quantity">
+    <input type="number" id="price" placeholder="Price">
+    <button onclick="addItem()">Add Item</button>
+    <div id="itemsList"></div>
+  </div>
+
+  <div class="actions">
+    <button onclick="generateInvoice()">Generate Invoice</button>
+    <button onclick="printInvoice()">Print Invoice</button>
+  </div>
+
+  <div id="invoice"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
