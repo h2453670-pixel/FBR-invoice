@@ -79,6 +79,16 @@ function generateInvoice() {
   let totalWords = numberToWords(Math.round(grandTotal));
 
   document.getElementById("invoice").innerHTML = `
+  <div class="invoice-header">
+  <img src="logo.png" class="invoice-logo">
+  <div class="invoice-title">
+    <h2>TAX INVOICE</h2>
+    <p>FBR Digital Invoice (Learning Purpose)</p>
+  </div>
+  <img src="fbr.png" class="invoice-logo">
+</div>
+<hr>
+
     <h2 style="text-align:center;">TAX INVOICE</h2>
     <p><b>Invoice #:</b> ${invoiceNumber}</p>
     <p><b>Date:</b> ${new Date().toLocaleDateString()}</p>
@@ -127,16 +137,6 @@ function printInvoice() {
     alert("Generate an invoice first.");
     return;
   }
-
-  let w = window.open("", "", "width=900,height=650");
-  w.document.write(`
-    <html>
-    <head>
-      <link rel="stylesheet" href="print.css">
-    </head>
-    <body>${invoiceContent}</body>
-    </html>
-  `);
-  w.document.close();
-  w.print();
+  window.print();
 }
+

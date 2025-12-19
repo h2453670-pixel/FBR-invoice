@@ -60,3 +60,43 @@ tr:nth-child(even) {
   color: #004080;
   font-weight: bold;
 }
+
+@media print {
+  body {
+    background: white;
+  }
+
+  #invoice {
+    margin-top: 0;
+  }
+}
+
+* {
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+}
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.invoice-logo {
+  width: 80px;
+  height: auto;
+}
+
+.invoice-title {
+  text-align: center;
+}
+
+.invoice-title h2 {
+  margin: 0;
+  color: black;
+}
+
+.invoice-title p {
+  margin: 0;
+  font-size: 13px;
+}

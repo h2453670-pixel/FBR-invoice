@@ -125,3 +125,28 @@ tr:nth-child(even) {
   font-style: italic;
   color: #004080;
 }
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.invoice-logo {
+  width: 90px;
+  height: auto;
+}
+
+.invoice-title {
+  text-align: center;
+}
+
+.invoice-title h2 {
+  margin: 0;
+  color: #004080;
+}
+
+.invoice-title p {
+  margin: 0;
+  font-size: 14px;
+}
